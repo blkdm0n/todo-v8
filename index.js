@@ -93,10 +93,11 @@ const handlers = {
   deleteTodo: function() {
     let deleteTodoText = document.getElementById("deleteTodoText");
     todoList.deleteTodo(deleteTodoText.value);
+    deleteTodoText.value = "";
   },
   toggleCompleted: function() {
-    todoList.toggleCompleted();
+    let completedTodoText = document.getElementById("completedTodoText");
+    todoList.toggleCompleted(completedTodoText.value);
+    completedTodoText.value = "";
   }
-
-
 }

@@ -5,5 +5,5 @@ REQUIREMENTS
 [X] There should be a button for adding todos
 [X] There should be a button for changing todos
 [X] There should be a button for deleting todos
-[] There should be a button for toggling todos
+[X] There should be a button for toggling todos
 
