@@ -15,10 +15,14 @@ var todoList = {
     }
   },
   addTodo: function (todoText) {
-    this.todos.push({
-      todoText: todoText,
-      completed: false,
-    });
+    if (todoText) {
+      this.todos.push({
+        todoText: todoText,
+        completed: false,
+      });
+    } else {
+      console.log(`Please enter a valid todo`);
+    }
     this.displayTodos();
   },
   changeTodo: function (oldTodo, newTodo) {
@@ -57,7 +61,6 @@ var todoList = {
       }
     }
     this.displayTodos();
-
   },
   deleteTodo: function (deletedTodo) {
     for (let i = 0; i < this.todos.length; i++) {
@@ -84,7 +87,7 @@ const handlers = {
     addTodoTextInput.value = "";
   },
   changeTodo: function() {
-    let changeTodoCurrentText = document.getElementById("changeTodoCurrentText")
+    let changeTodoCurrentText = document.getElementById("changeTodoCurrentText");
     let changeTodoNewText = document.getElementById("changeTodoNewText");
     todoList.changeTodo(changeTodoCurrentText.value, changeTodoNewText.value);
     changeTodoCurrentText.value = "";
@@ -99,5 +102,12 @@ const handlers = {
     let completedTodoText = document.getElementById("completedTodoText");
     todoList.toggleCompleted(completedTodoText.value);
     completedTodoText.value = "";
-  }
+  },
+  // getKeyCode: function() {
+  //   //take the id
+  //   let child = event.target.id;
+  //   //find the parent
+  //   let parent = document.getElementById(child).parentElement;
+  //   console.log(parent);
+  // }
 }
