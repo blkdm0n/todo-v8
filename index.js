@@ -84,7 +84,9 @@ const handlers = {
     addTodoTextInput.value = '';
   },
   changeTodo: function() {
-    todoList.changeTodo();
+    let changeTodoCurrentText = document.getElementById("changeTodoCurrentText")
+    let changeTodoNewText = document.getElementById("changeTodoNewText");
+    todoList.changeTodo(changeTodoCurrentText.value, changeTodoNewText.value);
   },
   deleteTodo: function() {
     todoList.deleteTodo();
