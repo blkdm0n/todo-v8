@@ -81,15 +81,18 @@ const handlers = {
   addTodo: function() {
     let addTodoTextInput = document.getElementById("addTodoTextInput")
     todoList.addTodo(addTodoTextInput.value);
-    addTodoTextInput.value = '';
+    addTodoTextInput.value = "";
   },
   changeTodo: function() {
     let changeTodoCurrentText = document.getElementById("changeTodoCurrentText")
     let changeTodoNewText = document.getElementById("changeTodoNewText");
     todoList.changeTodo(changeTodoCurrentText.value, changeTodoNewText.value);
+    changeTodoCurrentText.value = "";
+    changeTodoNewText.value = "";
   },
   deleteTodo: function() {
-    todoList.deleteTodo();
+    let deleteTodoText = document.getElementById("deleteTodoText");
+    todoList.deleteTodo(deleteTodoText.value);
   },
   toggleCompleted: function() {
     todoList.toggleCompleted();

@@ -20,16 +20,20 @@
 
     <div>
       <button onclick="handlers.addTodo()">Add</button>
-      <input id="addTodoTextInput" type="text">
+      <input id="addTodoTextInput" placeholder="Enter Todo" type="text">
     </div>
+
     <div>
       <button onclick="handlers.changeTodo()">Edit</button>
       <input id="changeTodoCurrentText" placeholder="Existing Todo" type="text">
       <input id="changeTodoNewText" placeholder="New Todo" type="text">
     </div>
+
+    <div>
       <button onclick="handlers.deleteTodo()">Delete</button>
+      <input id="deleteTodoText" placeholder="Delete this todo" type="text">
       <button onclick="handlers.toggleCompleted()">Toggle Todo</button>
-    </div>
+    
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
